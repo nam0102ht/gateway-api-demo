@@ -10,3 +10,5 @@ async function init() {
 		console.log(`Server is listening from PORT 5000`)
 	})
 }
+
+init();

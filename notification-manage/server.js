@@ -1,3 +1,5 @@
+"use strict"
+
 const express = require("express");
 const app = express();
 const handler = require("./function/handler")
@@ -10,3 +12,5 @@ async function init() {
 		console.log(`Server is listening from PORT 5000`)
 	})
 }
+
+init();
