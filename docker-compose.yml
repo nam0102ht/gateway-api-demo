@@ -1,8 +1,8 @@
 nginx:
   image: nginx:1.15.3-alpine
   ports:
-    - "80:4000"
-    - "443:443"
+    - "4000:4000"
+    - "443:4000"
   volumes:
     - ./api-gateway/nginx:/etc/nginx/conf.d
   links:

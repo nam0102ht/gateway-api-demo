@@ -1,7 +1,9 @@
 module.exports = async (config) => {
 	const app = config.app;
 	app.get("/", (req, res) => {
-		return res.status(200).send(req.body);
+		return res.status(200).send({
+			message: "Welcome to User Manage"
+		});
 	});
 	app.post("/", (req, res) => {
 		return res.status(200).send(req.body);
