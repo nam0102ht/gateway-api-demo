@@ -1,0 +1,18 @@
+nginx:
+  image: nginx:1.15.3-alpine
+  ports:
+    - "80:4000"
+    - "443:443"
+  volumes:
+    - ./api-gateway/nginx:/etc/nginx/conf.d
+  links:
+    - notification:notification
+    - user:user
+notification:
+  build: ./notification-manage
+  volumes:
+    - ./notification-manage:/btaskee/notification-manage
+user:
+  build: ./user-manage
+  volumes:
+    - ./user-manage:/btaskee/user-manage
